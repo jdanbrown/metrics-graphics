@@ -81,7 +81,7 @@ charts.line = function(args) {
 
             //add the area
             var $area = $(args.target).find('svg path.mg-area' + (line_id) + '-color');
-            if(args.area && !args.use_data_y_min && !args.y_axis_negative && args.data.length <= 1) {
+            if(args.area && !args.use_data_y_min && !args.y_axis_negative) {
                 //if area already exists, transition it
                 if($area.length > 0) {
                     $(svg.node()).find('.mg-y-axis').after($area.detach());
